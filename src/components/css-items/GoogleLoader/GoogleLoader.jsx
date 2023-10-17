@@ -1,11 +1,11 @@
 import "./GoogleLoader.css";
-const GoogleLoader = () => {
+const GoogleLoader = ({ children }) => {
   return (
-    <div class="container">
-      <div class="loader">
-        <svg class="circular" viewBox="25 25 50 50">
+    <div className="g-loader-container">
+      <div className="g-loader-loader">
+        <svg className="g-loader-circular" viewBox="25 25 50 50">
           <circle
-            class="path"
+            className="g-loader-path"
             cx="50"
             cy="50"
             r="20"
@@ -15,6 +15,7 @@ const GoogleLoader = () => {
           />
         </svg>
       </div>
+      {children}
     </div>
   );
 };
